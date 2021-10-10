@@ -9,7 +9,7 @@ Explanation of data from smart meter
 --------------------------------------------------------
 /KMP5 KA6U001660297912                                                          serienummer meter                                
                                                                                                                        
-0-0:96.1.1(204B413655303031363630323937393132)                                                                         
+0-0:96.1.1(xxxxxxxxxxxxxxxxxxxxxxxxx)                                                                         
 1-0:1.8.1(00013.000*kWh)                                                        +T1 = 13     Afgenomen stroom daltarief 13 kWh
 8.2(00001.000*kWh)                                                              +T2 = 1      Afgenomen stroom piektarief 1 kWh     
 1-0:2.8.1(00026.000*kWh)                                                        -T1 = 26     Teruggeleverde stroom daltarief 26 kWh
@@ -22,7 +22,7 @@ Explanation of data from smart meter
 0-0:96.13.1()                                                                   bericht numeriek
 0-0:96.13.0()                                                                   bericht tekst
 0-1:24.1.0(3)                                                                   andere apparaten op de M-Bus
-0-1:96.1.0(3238313031353431303034303232323131)                                  identificatie van de gasmeter
+0-1:96.1.0(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)                                  identificatie van de gasmeter
 0-1:24.3.0(121028200000)(00)(60)(1)(0-1:24.2.1)(m3)                             tijd van de laatste gasmeting (121028200000) 2012-10-28
 (00015.475)                                                                     verbruikte hoeveelheid 15 m3 gas
 0-1:24.4.0(1)                                                                   stand gasklep
