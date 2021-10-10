@@ -40,7 +40,7 @@ while p1_counter < 36:
 
 # Send data to azure queue for further processing
 from azure.storage.queue import QueueClient
-queue = QueueClient.from_connection_string(conn_str="DefaultEndpointsProtocol=https;AccountName=smartmeterreadings;AccountKey=cOWMFhFEif44qeuQsk5um+PtK0OdSv2pWjisigL1f0ecedyBO1vwdNv1WQdC3LqTY5o4hPeJUFpnzKhs2pnGuA==;EndpointSuffix=core.windows.net", queue_name="readings")
+queue = QueueClient.from_connection_string(conn_str="xxxxxxxx", queue_name="readings")
 queue.send_message(stack)
 
 try:
