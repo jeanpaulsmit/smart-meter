@@ -6,6 +6,7 @@ import argparse
 import json
 import sys
 import serial
+import six
 
 ser = serial.Serial()
 ser.baudrate = 115200
@@ -39,9 +40,9 @@ while p1_counter < 36:
 # print stack
 
 # Send data to azure queue for further processing
-from azure.storage.queue import QueueClient
-queue = QueueClient.from_connection_string(conn_str="xxxxxxxx", queue_name="readings")
-queue.send_message(stack)
+from azure.storage.queue import QueueClient, TextBase64EncodePolicy
+queue_client = QueueClient.from_connection_string(conn_str="DefaultEndpointsProtocol=https;AccountName=smartmeterreadings;AccountKey=XXXXXXXX;EndpointSuffix=core.windows.net", queue_name="readings", message_encode_policy=TextBase64EncodePolicy())
+queue_client.send_message(six.text_type(",".join(stack), encoding='utf8', errors='ignore'), time_to_live=-1)
 
 try:
     ser.close()

@@ -9,7 +9,7 @@ Explanation of data from smart meter
 --------------------------------------------------------
 /KMP5 KA6U001660297912                                                          serienummer meter                                
                                                                                                                        
-0-0:96.1.1(xxxxxxxxxxxxxxxxxxxxxxxxx)                                                                         
+0-0:96.1.1(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)                                                                         
 1-0:1.8.1(00013.000*kWh)                                                        +T1 = 13     Afgenomen stroom daltarief 13 kWh
 8.2(00001.000*kWh)                                                              +T2 = 1      Afgenomen stroom piektarief 1 kWh     
 1-0:2.8.1(00026.000*kWh)                                                        -T1 = 26     Teruggeleverde stroom daltarief 26 kWh
@@ -41,3 +41,6 @@ To edit running cron jobs use: crontab -e
 
 Run every minute:
 */1 * * * * /usr/bin/python /home/pi/SmartMeter/ReadSmartMeter.py
+
+-- Use nano as edit tool --
+nano ReadSmartMeter.py
